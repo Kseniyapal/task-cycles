@@ -5,7 +5,9 @@
 */
 export function rangeSum(start, end) {
   let sum = 0;
-  for (let i = start; i < end; i += 1) if (i % 2 == 0) sum += i;
+  for (let i = start; i <= end; i++) 
+    if (i % 2 == 0) 
+      sum += i;
   return sum;
 }
 
@@ -31,10 +33,9 @@ export function iterationCount(a) {
 export function symbolsReplace(message) {
   let i = 2;
   do {
-      message =
-          message.slice(0, i) + '_' + message.slice(i + 1, length(message));
+      message =message.slice(0, i) + '_' + message.slice(i + 1, message.length);
       i += 3;
-  } while (i < length(message));
+  } while (i < message.length);
 
   return message;
 }
